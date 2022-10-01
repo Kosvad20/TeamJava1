@@ -5,6 +5,7 @@ import java.util.Date;
 public class Car{
     private int id;
     private static int counterId =1;
+    private String brand;
     private String model;
     private Date year;
     private Color color;
@@ -13,9 +14,10 @@ public class Car{
     private static int counterRegNumber = 1000;
 
     Car(){
-        this(   "no model",new Date(), Color.RED, 0);
+        this("no brand", "no model", new Date(), Color.RED, 0);
     }
-    Car(String model, Date year, Color color, int price ){
+    Car(String brand, String model, Date year, Color color, int price ){
+        this.brand = brand;
         this.model = model;
         this.year = year;
         this.color = color;
@@ -32,6 +34,8 @@ public class Car{
     public String getModel(){
         return this.model;
     }
+    public String getBrand() { return this.brand; }
+    public void setBrand(String brand) { this.brand = brand; }
     public void setModel(String model){
         this.model = model;
     }
@@ -58,5 +62,11 @@ public class Car{
     }
     public void setRegistrationNumber(int  registrationNumber){
         this.registrationNumber = registrationNumber;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("Car(id=%d, brand=%s, model=%s, year=%s, color=%s, price=%d, registrationNumber=%d",
+                id, brand, model, year, color, price, registrationNumber);
     }
 }
