@@ -64,7 +64,7 @@ public class Car{
 
     @Override
     public String toString() {
-        return String.format("Car(id=%d, brand=%s, model=%s, year=%s, color=%s, price=%d, registrationNumber=%d",
+        return String.format("Car(id=%d, brand=%s, model=%s, year=%s, color=%s, price=%d, registrationNumber=%d)",
                 id, brand, model, year, color, price, registrationNumber);
     }
 }
