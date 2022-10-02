@@ -1,22 +1,20 @@
 package com.teampractice;
 
-import java.util.Date;
-
 public class Car{
     private int id;
     private static int counterId =1;
     private String brand;
     private String model;
-    private Date year;
+    private int year;
     private Color color;
     private int price;
     private int registrationNumber;
     private static int counterRegNumber = 1000;
 
     Car(){
-        this("no brand", "no model", new Date(), Color.RED, 0);
+        this("no brand", "no model", 0, Color.RED, 0);
     }
-    Car(String brand, String model, Date year, Color color, int price ){
+    Car(String brand, String model, int year, Color color, int price ){
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -45,10 +43,10 @@ public class Car{
     public void setColor(Color color){
         this.color = color;
     }
-    public Date getYear(){
+    public int getYear(){
         return this.year;
     }
-    public void setYear(Date year){
+    public void setYear(int year){
         this.year = year;
     }
     public int getPrice(){
