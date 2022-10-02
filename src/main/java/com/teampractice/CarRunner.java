@@ -2,7 +2,7 @@ package com.teampractice;
 
 public class CarRunner {
 
-    private static void PrintCarArray(Car[] carArray){
+    private static void printCarArray(Car[] carArray){
         if(carArray.length == 0){
             System.out.println("No cars under such conditions!");
         }
@@ -24,23 +24,23 @@ public class CarRunner {
 
         //Printing an array
         System.out.println("Here is full array");
-        CarRunner.PrintCarArray(carArray);
+        CarRunner.printCarArray(carArray);
         System.out.println("");
 
         //Printing task results
         System.out.println("Task 1: print all cars of brand Honda");
-        CarRunner.PrintCarArray(CarUtilities.getCarsOfBrand(carArray, "Honda"));
+        CarRunner.printCarArray(CarUtilities.getCarsOfBrand(carArray, "Honda"));
         System.out.println("");
 
         System.out.println("Task 2.1: print all cars of brand Ford and elder than 20 years");
-        CarRunner.PrintCarArray(CarUtilities.getCarsOfBrandOlderThanNYears(carArray, "Ford", 20));
+        CarRunner.printCarArray(CarUtilities.getCarsOfBrandOlderThanNYears(carArray, "Ford", 20));
         System.out.println("Task 2.2: print all cars of brand Ford and elder than 2 years");
-        CarRunner.PrintCarArray(CarUtilities.getCarsOfBrandOlderThanNYears(carArray, "Ford", 2));
+        CarRunner.printCarArray(CarUtilities.getCarsOfBrandOlderThanNYears(carArray, "Ford", 2));
         System.out.println("");
 
         System.out.println("Task 3.1: print all cars of year 2008 and price higher than 3000");
-        CarRunner.PrintCarArray(CarUtilities.getCarsOfYearWithPriceHigherThanN(carArray, 2008, 3000));
+        CarRunner.printCarArray(CarUtilities.getCarsOfYearWithPriceHigherThanN(carArray, 2008, 3000));
         System.out.println("Task 3.2: print all cars of year 2008 and price higher than 6500");
-        CarRunner.PrintCarArray(CarUtilities.getCarsOfYearWithPriceHigherThanN(carArray, 2008, 6500));
+        CarRunner.printCarArray(CarUtilities.getCarsOfYearWithPriceHigherThanN(carArray, 2008, 6500));
     }
 }
